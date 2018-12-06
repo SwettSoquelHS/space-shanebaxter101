@@ -2,11 +2,11 @@ class Normal {
   double x_pos;
   double y_pos;
   double angle;
-  double speed;
+  float speed;
   float radius;
   int shade;
   
-  public Normal(double x_pos, double y_pos, double angle, double speed, int shade, float radius){
+  public Normal(double x_pos, double y_pos, double angle, float speed, int shade, float radius){
     this.x_pos = x_pos;
     this.y_pos = y_pos;
     this.angle = angle;
@@ -18,7 +18,7 @@ class Normal {
   void move(){
     x_pos = x_pos + (Math.cos(angle) * speed);
     
-    y_pos = y_pos + (Math.cos(angle) * speed);
+    y_pos = y_pos + (Math.sin(angle) * speed);
   }
   
   void show(){
@@ -29,4 +29,5 @@ class Normal {
     
     ellipse(x, y, radius, radius);
   }
+  
 }
