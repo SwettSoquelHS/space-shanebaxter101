@@ -1,4 +1,4 @@
-class Oddball {
+class Oddball extends Normal {
   double x_pos;
   double y_pos;
   float speed;
@@ -7,7 +7,8 @@ class Oddball {
   float targy;
   float dy;
   
-  public Oddball(double x_pos, double y_pos, float speed){
+  public Oddball(double x_pos, double y_pos, double angle, float speed, int shade){
+    super(x_pos, y_pos, angle, speed, shade);
     this.x_pos = x_pos;
     this.y_pos = y_pos;
     this.speed = speed;

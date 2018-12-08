@@ -3,16 +3,14 @@ class Normal {
   double y_pos;
   double angle;
   float speed;
-  float radius;
   int shade;
   
-  public Normal(double x_pos, double y_pos, double angle, float speed, int shade, float radius){
+  public Normal(double x_pos, double y_pos, double angle, float speed, int shade){
     this.x_pos = x_pos;
     this.y_pos = y_pos;
     this.angle = angle;
     this.speed = speed;
     this.shade = shade;
-    this.radius = radius;
   }
   
   void move(){
@@ -27,7 +25,7 @@ class Normal {
     float x = (float)x_pos;
     float y = (float)y_pos;
     
-    ellipse(x, y, radius, radius);
+    ellipse(x, y, 7, 7);
   }
   
 }
